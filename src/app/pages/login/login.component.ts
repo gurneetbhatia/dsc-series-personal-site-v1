@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { NotificationService } from 'src/app/services/notification.service';
 
 class CustomErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -31,7 +32,8 @@ export class LoginComponent implements OnInit {
   matcher = new CustomErrorStateMatcher();
 
   constructor(private formBuilder: FormBuilder,
-              private authAf: AngularFireAuth) { }
+              private authAf: AngularFireAuth,
+              private notificationService: NotificationService) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -43,12 +45,12 @@ export class LoginComponent implements OnInit {
   loginWithEmail(): void {
     this.authAf.signInWithEmailAndPassword(this.emailFormControl.value, this.passwordFormControl.value)
     .then(
-      (succ) => {
-        console.log(succ);
+      (_) => {
+        this.notificationService.showSuccess("Successfully signed in");
       }
     ).catch(
       (err) => {
-        console.log(err);
+        this.notificationService.showError(err.message);
       }
     )
   }
