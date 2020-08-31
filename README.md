@@ -6,3 +6,5 @@ This project is being developed as the first version of the product that will be
 - Added Angular Material UI library to app
   - Chose the "Deep Purple/Amber" theme
 - Cleaned up the `app.component.html` template to remove auto-generated code
+- Make a navbar
+  - Make a Device Service that enables us to make it dynamic
