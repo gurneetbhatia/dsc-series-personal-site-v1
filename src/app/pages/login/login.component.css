@@ -1,0 +1,23 @@
+.full-width {
+    width: 100%;
+}
+
+.login {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    padding: 10px;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #484848;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.form-control {
+    margin-top: 3px;
+}
