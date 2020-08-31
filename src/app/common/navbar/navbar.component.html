@@ -8,7 +8,8 @@
             <a mat-button>Contact</a>
         </div>
         <span class="distant-spacer"></span>
-        <a mat-button [routerLink]="['/login']">Login</a>
+        <a mat-button *ngIf="isLoggedIn === false" [routerLink]="['/login']">Login</a>
+        <button mat-button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
     </mat-toolbar>
 
     <mat-toolbar *ngIf="isMobile" color="primary">
@@ -21,7 +22,8 @@
             <a mat-menu-item>Home</a>
             <a mat-menu-item>Experience</a>
             <a mat-menu-item>Contact</a>
-            <a mat-menu-item [routerLink]="['/login']">Login</a>
+            <a mat-menu-item *ngIf="isLoggedIn === false" [routerLink]="['/login']">Login</a>
+            <button mat-menu-item *ngIf="isLoggedIn" (click)="logout()">Logout</button>
         </mat-menu>
     </mat-toolbar>
 
