@@ -9,11 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './common/navbar/navbar.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
