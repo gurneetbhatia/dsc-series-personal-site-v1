@@ -4,7 +4,7 @@
         <span>John Doe</span>
         <div class="nav-links">
             <a mat-button [routerLink]="['/']">Home</a>
-            <a mat-button>Experience</a>
+            <a mat-button [routerLink]="['/experience']">Experience</a>
             <a mat-button>Contact</a>
         </div>
         <span class="distant-spacer"></span>
@@ -20,7 +20,7 @@
         </button>
         <mat-menu #menu="matMenu" yPosition="below">
             <a mat-menu-item [routerLink]="['/']">Home</a>
-            <a mat-menu-item>Experience</a>
+            <a mat-menu-item [routerLink]="['/experience']">Experience</a>
             <a mat-menu-item>Contact</a>
             <a mat-menu-item *ngIf="isLoggedIn === false" [routerLink]="['/login']">Login</a>
             <button mat-menu-item *ngIf="isLoggedIn" (click)="logout()">Logout</button>
