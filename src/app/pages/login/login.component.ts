@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder, FormGroupDirective, Ng
 import { ErrorStateMatcher } from '@angular/material/core';
 import { NotificationService } from 'src/app/services/notification.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { Router } from '@angular/router';
 
 class CustomErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
   matcher = new CustomErrorStateMatcher();
 
   constructor(private formBuilder: FormBuilder,
+              private router: Router,
               private authService: AuthenticationService,
               private notificationService: NotificationService) { }
 
@@ -47,6 +49,7 @@ export class LoginComponent implements OnInit {
     .then(
       (_) => {
         this.notificationService.showSuccess("Successfully signed in");
+        this.router.navigate(['/']);
       }
     ).catch(
       (err) => {
