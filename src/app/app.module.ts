@@ -19,6 +19,7 @@ import { firebaseConfig } from './firebase-config';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './pages/home/home.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
+import { ExperienceCardComponent } from './pages/experience/experience-card/experience-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ExperienceComponent } from './pages/experience/experience.component';
     NavbarComponent,
     LoginComponent,
     HomeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ExperienceCardComponent
   ],
   imports: [
     BrowserModule,
