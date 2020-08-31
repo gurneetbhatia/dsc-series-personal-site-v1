@@ -21,15 +21,14 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.windowResize();
 
-    this.authService.getLoggedInUser()
-      .subscribe(
-        (user) => {
-          this.isLoggedIn = user ? true : false;
-        },
-        (err) => {
-          this.isLoggedIn = false;
-        }
-      )
+    this.authService.getLoggedInUser().subscribe(
+      (user) => {
+        this.isLoggedIn = user ? true : false;
+      },
+      (_err) => {
+        this.isLoggedIn = false;
+      }
+    );
   }
 
   windowResize(): void {
