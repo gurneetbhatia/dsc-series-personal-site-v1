@@ -8,7 +8,7 @@
             <a mat-button>Contact</a>
         </div>
         <span class="distant-spacer"></span>
-        <a mat-button>Login</a>
+        <a mat-button [routerLink]="['/login']">Login</a>
     </mat-toolbar>
 
     <mat-toolbar *ngIf="isMobile" color="primary">
@@ -21,7 +21,7 @@
             <a mat-menu-item>Home</a>
             <a mat-menu-item>Experience</a>
             <a mat-menu-item>Contact</a>
-            <a mat-menu-item>Login</a>
+            <a mat-menu-item [routerLink]="['/login']">Login</a>
         </mat-menu>
     </mat-toolbar>
 

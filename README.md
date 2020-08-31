@@ -11,3 +11,6 @@ This project is being developed as the first version of the product that will be
   - A slightly different view offering a mobile-friendly UI
 - Firebase init
   - Update `.gitignore` to avoid uploading sensitive credentials online
+- Generate Login page
+  - Add routing to this page
+  - Connect the router link to navbar links (for both desktop and mobile views)
