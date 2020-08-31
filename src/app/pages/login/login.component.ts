@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { NotificationService } from 'src/app/services/notification.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 

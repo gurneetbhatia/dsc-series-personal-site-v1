@@ -14,3 +14,6 @@ This project is being developed as the first version of the product that will be
 - Generate Login page
   - Add routing to this page
   - Connect the router link to navbar links (for both desktop and mobile views)
+  - implemented a notification service using `toastr` to display output of http calls on UI
+  - implemented an auth service that allows the user to login with email and password
+    - uses firebase authentication
