@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class DeviceService {
 
   constructor() { }
+
+  isMobile(): boolean {
+    return window.innerWidth <= 750;
+  }
 }
