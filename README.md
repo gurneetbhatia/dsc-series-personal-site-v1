@@ -9,3 +9,5 @@ This project is being developed as the first version of the product that will be
 - Make a navbar
   - Make a Device Service that enables us to make it dynamic
   - A slightly different view offering a mobile-friendly UI
+- Firebase init
+  - Update `.gitignore` to avoid uploading sensitive credentials online
