@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { firebaseConfig } from './firebase-config';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { firebaseConfig } from './firebase-config';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    ToastrModule.forRoot(),
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
