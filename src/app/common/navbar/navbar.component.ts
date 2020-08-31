@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { DeviceService } from 'src/app/services/device.service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +15,8 @@ export class NavbarComponent implements OnInit {
   isLoggedIn: boolean;
 
   constructor(private deviceService: DeviceService,
-              private authService: AuthenticationService) { }
+              private authService: AuthenticationService,
+              private notficationService: NotificationService) { }
 
   ngOnInit(): void {
     this.windowResize();
@@ -34,7 +37,10 @@ export class NavbarComponent implements OnInit {
   }
 
   logout(): void {
-    this.authService.signOut().then(() => this.isLoggedIn = false);
+    this.authService.signOut().then(() => {
+      this.isLoggedIn = false;
+      this.notficationService.showSuccess("Successfully logged out");
+    });
   }
 
 }
