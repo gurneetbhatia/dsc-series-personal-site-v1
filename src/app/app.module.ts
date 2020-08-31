@@ -17,12 +17,14 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { firebaseConfig } from './firebase-config';
 import { ToastrModule } from 'ngx-toastr';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
