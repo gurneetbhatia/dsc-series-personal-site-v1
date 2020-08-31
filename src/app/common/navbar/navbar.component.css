@@ -1,0 +1,11 @@
+.distant-spacer {
+    flex: 1 1 auto;
+}
+
+.nav-links {
+    margin-left: 15px;
+}
+
+.navbar {
+    min-width: 180px;
+}
