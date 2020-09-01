@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -45,7 +46,8 @@ import { ExperienceCardComponent } from './pages/experience/experience-card/expe
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+.xp-card {
+    max-width: 500px;
+}
+
+.aligned-with-icon{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px; /* optional */
+}

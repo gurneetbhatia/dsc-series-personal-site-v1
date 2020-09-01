@@ -1,12 +1,14 @@
-<mat-card>
+<mat-card class="xp-card">
     <mat-card-header>
-        <mat-card-title>Some xp</mat-card-title>
-        <mat-card-subtitle>Some place, Narnia</mat-card-subtitle>
+        <mat-card-title>{{ title }}</mat-card-title>
+        <mat-card-subtitle>{{ location }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-        <p>
-            A brief description of this experience
-        </p>
+        <p>{{ description }}</p>
     </mat-card-content>
-    <mat-card-footer>12/07/2020</mat-card-footer>
+    <mat-divider></mat-divider>
+    <mat-card-footer>
+        <mat-icon>calendar_today</mat-icon>
+        <span class="aligned-with-icon">{{ from + ' - ' + to}}</span>
+    </mat-card-footer>
 </mat-card>

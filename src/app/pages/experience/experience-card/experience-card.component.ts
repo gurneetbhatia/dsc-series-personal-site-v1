@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-experience-card',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience-card.component.css']
 })
 export class ExperienceCardComponent implements OnInit {
+
+  @Input() title: string;
+  @Input() location: string;
+  @Input() description: string;
+  @Input() from: string;
+  @Input() to: string;
 
   constructor() { }
 
