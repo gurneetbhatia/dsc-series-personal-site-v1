@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Experience } from 'src/assets/dtos/experience.dto';
 
 @Component({
   selector: 'app-experience-card',
@@ -7,11 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ExperienceCardComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() location: string;
-  @Input() description: string;
-  @Input() from: string;
-  @Input() to: string;
+  @Input() experience: Experience;
 
   constructor() { }
 

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from 'src/app/services/data.service';
+import { Experience } from 'src/assets/dtos/experience.dto';
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  experiences: Experience[];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.experiences = this.dataService.getExperiences();
   }
 
 }

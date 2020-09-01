@@ -2,6 +2,7 @@ import { Experience } from './dtos/experience.dto';
 
 export const experiences: Experience[] = [
     {
+        id: "0",
         title: "some experience",
         location: "some place, narnia",
         description: "some description",
@@ -9,6 +10,7 @@ export const experiences: Experience[] = [
         to: "13/08/2017"
     },
     {
+        id: "1",
         title: "another experience",
         location: "the matrix",
         description: "killing ninjas",
