@@ -9,6 +9,6 @@
     <mat-divider></mat-divider>
     <mat-card-footer>
         <mat-icon>calendar_today</mat-icon>
-        <span class="aligned-with-icon">{{ experience.from + ' - ' + experience.to}}</span>
+        <span class="aligned-with-icon">{{ (experience.from.datetime | date) + ' - ' + (experience.to.datetime | date)}}</span>
     </mat-card-footer>
 </mat-card>

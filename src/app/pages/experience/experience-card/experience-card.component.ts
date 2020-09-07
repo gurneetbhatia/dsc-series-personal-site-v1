@@ -13,6 +13,8 @@ export class ExperienceCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.experience.from.datetime = new Date(this.experience.from.seconds * 1000);
+    this.experience.to.datetime = new Date(this.experience.to.seconds * 1000);
   }
 
 }
