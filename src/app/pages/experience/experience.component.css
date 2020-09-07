@@ -1,0 +1,10 @@
+.xp-card-list {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.xp-card {
+    margin-top: 20px;
+    display: inline-block;
+}

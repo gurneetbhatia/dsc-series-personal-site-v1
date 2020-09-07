@@ -1,9 +1,11 @@
 .xp-card {
     max-width: 500px;
+    min-width: 300px;
+    margin-left: 5px;
 }
 
 .aligned-with-icon{
     position: absolute;
     margin-top: 5px;
-    margin-left: 5px; /* optional */
+    margin-left: 5px;
 }
